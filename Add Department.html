@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Department</title>
+    <style type="text/css">
+        body{
+            background-color: papayawhip;
+            margin: 300px;
+            text-align: center;
+        }
+        button {
+            width: 30%;
+            height: 40%;
+            background-color: goldenrod;
+            border-radius: 30px;
+
+        }
+    </style>
+    <script
+            src="https://code.jquery.com/jquery-3.5.1.js"
+            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+            crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                type: 'Get',
+                dataType: 'JSON',
+                url: 'https://morganoffice.herokuapp.com/api/departments/',
+                success: function (data) {
+                    // location.reload();
+
+                    i = 0;
+                    while (i < data.length){
+                        department = data[i];
+                        $("#department_name_input").append("<option value='"+department.department_id+"'>"+department.name+"</option>");
+                        i = i + 1;
+                    }
+                },
+                error: function (err) {
+                    console.log(err);
+                }
+            });
+
+            $("#add_department_but").click(function () {
+                name1 = $("#name_input").val();
+                location1 = $("#location_input").val();
+
+
+                $.ajax({
+                    type: 'POST',
+                    dataType: 'JSON',
+                    url: 'https://morganoffice.herokuapp.com/api/departments/',
+                    data: {
+                        name: name1,
+                        location: location1,
+
+                    },
+                    success: function (data) {
+                        alert('Department added successfully');
+                        location.reload();
+                    },
+                    error: function (err) {
+                        console.log(err);
+                        errors = JSON.parse(err.responseText);
+                        console.log(errors);
+                        $("#name_input_err").text(errors.name);
+                        $("#location_input_err").text(errors.location);
+
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+
+<img src="image/department.jpg" height="1024" width="1024"/>
+<form onsubmit="return false">
+    <p><label>  Name: </label><input id="name_input" type="text" maxlength="30" size="30"></p>
+    <p id = "_name_input_err"></p>
+    <p><label> Location: </label><input id="location_input" type="text" maxlength="20" size="20"></p>
+    <p id = "location_input_err"></p>
+
+    </select>
+    </p>
+
+    <button type="button" id="add_department_but">Add Department</button>
+    <p></p>
+    <a href="MainMenu.html">Main Menu</a>
+</form>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Project</title>
+
+
+    <style type="text/css">
+        body{
+            background-color: antiquewhite;
+        }
+        button {
+            width: 20%;
+            height: 10%;
+            background-color: coral;
+        }
+    </style>
+    <script
+            src="https://code.jquery.com/jquery-3.5.1.js"
+            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+            crossorigin="anonymous"></script>
+
+
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                type: 'Get',
+                dataType: 'JSON',
+                url: 'https://morganoffice.herokuapp.com/api/projects/',
+                success: function (data) {
+                    // location.reload();
+
+                    i = 0;
+                    while (i < data.length){
+                        project = data[i];
+                        $("#project_id_input").append("<option value='"+project.project_id+"'>"+project.id+"</option>");
+                        i = i + 1;
+                    }
+                },
+                error: function (err) {
+                    console.log(err);
+                }
+            });
+
+            $("#add_project_but").click(function () {
+                name = $("#name_input").val();
+                budget = $("#budget_input").val();
+                startdate = $("#startdate_input").val();
+                status = $("#status_input").val();
+                notes = $("#phone_number_input").val();
+
+
+                $.ajax({
+                    type: 'POST',
+                    dataType: 'JSON',
+                    url: 'https://morganoffice.herokuapp.com/api/projects/',
+                    data: {
+                        name: name,
+                        budget: budget,
+                        startdate: startdate,
+                        status: status,
+                        notes: notes,
+
+                    },
+                    success: function (data) {
+                        alert('Project added successfully');
+                        location.reload();
+                    },
+                    error: function (err) {
+                        console.log(err);
+                        errors = JSON.parse(err.responseText);
+                        console.log(errors);
+                        $("#name_input_err").text(errors.name);
+                        $("#budget_input_err").text(errors.budget);
+                        $("#startdate_input_err").text(errors.startdate);
+                        $("#status_input_err").text(errors.status);
+                        $("#notes_input_err").text(errors.notes);
+
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+<form onsubmit="return false">
+    <p><label>  Name: </label><input id="name_input" type="text" maxlength="25" size="25"></p>
+    <p id = "name_input_err"></p>
+    <p><label> budget: </label><input id="budget_input" type="numbere" maxlength="8" size="8"></p>
+    <p id = "budget_input_err"></p>
+    <p><label> Start Date: </label><input id="startdate_input" type="text" maxlength="10" size="10"></p>
+    <p id = "startdate_input_err"></p>
+    <p><label> Status: </label><input id="status_input" type="text" maxlength="8" size="8"></p>
+    <p id = "status_input_err"></p>
+    <p><label> Notes: </label><input id="notes_input" type="text" maxlength="100" size="100"></p>
+    <p id = "notes_input_err"></p>
+
+
+        </select>
+    </p>
+    <p id = "project_id_input_err"></p>
+    <button type="button" id="add_project_but">Add Project</button>
+    <p></p>
+    <a href="MainMenu.html">Main Menu</a>
+</form>
+</body>
+</html>
