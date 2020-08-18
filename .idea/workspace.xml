@@ -18,7 +18,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1gCryZU90rEJTqGt7YEbn58Xy2E" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -33,6 +37,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -47,7 +52,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1597629671090</updated>
-      <workItem from="1597629672238" duration="18366000" />
+      <workItem from="1597629672238" duration="19120000" />
     </task>
     <servers />
   </component>
@@ -55,6 +60,10 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1597719751038">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1597719751038" />
     <state x="521" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1597643822773">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -63,5 +72,13 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="599" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1597633444199" />
+    <state x="635" y="310" key="Github.ShareDialog" timestamp="1597719819789">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="635" y="310" key="Github.ShareDialog/0.0.1536.824@0.0.1536.824" timestamp="1597719819789" />
+    <state x="553" y="117" key="Github.UntrackedFilesDialog" timestamp="1597719829679">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="553" y="117" key="Github.UntrackedFilesDialog/0.0.1536.824@0.0.1536.824" timestamp="1597719829679" />
   </component>
 </project>
