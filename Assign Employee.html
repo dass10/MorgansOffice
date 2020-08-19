@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Employee</title>
+
+
+    <style type="text/css">
+        body{
+            background-color: antiquewhite;
+        }
+        button {
+            width: 20%;
+            height: 10%;
+            background-color: coral;
+        }
+    </style>
+    <script
+            src="https://code.jquery.com/jquery-3.5.1.js"
+            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+            crossorigin="anonymous">
+        
+    </script>
+
+
+        <script>
+        $(document).ready(function () {
+            $.ajax({
+                type: 'Get',
+                dataType: 'JSON',
+                url: 'https://morganoffice.herokuapp.com/api/assignments/',
+                success: function (data) {
+                    // location.reload();
+
+                    i = 0;
+                    while (i < data.length){
+                        department = data[i];
+                        $("#department_id_input").append("<option value='"+department.department_id+"'>"+department.name+"</option>");
+                        i = i + 1;
+                    }
+                },
+                error: function (err) {
+                    console.log(err);
+                }
+            });
+
+            $("#assign_employee_but").click(function () {
+                employeeid = $("#employeeid_input").val();
+                departmentid = $("#department_id_input").val();
+                hour = $("#hour_input").val();
+
+
+                $.ajax({
+                    type: 'POST',
+                    dataType: 'JSON',
+                    url: 'https://morganoffice.herokuapp.com/api/assignments/',
+                    data: {
+                       employeeid: employeeid1,
+                        departmentid: departmentid,
+                        hour: hour,
+
+                    },
+                    success: function (data) {
+                        alert('Employee assigned successfully');
+                        location.reload();
+                    },
+                    error: function (err) {
+                        console.log(err);
+                        errors = JSON.parse(err.responseText);
+                        console.log(errors);
+                        $("#employeeid_input_err").text(errors.employee);
+                        $("#department_id_input_err").text(errors.department);
+                        $("#hour_input_err").text(errors.hour);
+
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+<form onsubmit="return false">
+    <p><label> Employee ID: </label>
+        <select id="employee_id_input">
+            <option value = "">Select one</option>
+        </select>
+    <p><label> Department: </label>
+        <select id="department_id_input">
+            <option value = "">Select one</option>
+        </select>
+    <p><label> Hourly Rate: </label><input id="hourly_rate_input" type="number" maxlength="5" size="5"></p>
+    <p id = "hourly_rate_input_err"></p>
+
+    <a href="MainMenu.html">Main Menu</a>
+</form>
+</body>
+</html>
