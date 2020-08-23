@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Add Department</title>
+    <script
+        src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+        crossorigin="anonymous">
+    </script>
     <style type="text/css">
         body{
             background-color: papayawhip;
@@ -14,15 +19,11 @@
             height: 40%;
             background-color: goldenrod;
             border-radius: 30px;
-
         }
     </style>
-    <script
-            src="https://code.jquery.com/jquery-3.5.1.js"
-            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-            crossorigin="anonymous"></script>
 
-    <script>
+
+ <script>
         $(document).ready(function () {
             $.ajax({
                 type: 'Get',
