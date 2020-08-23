@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Add Employee</title>
+    <title>View Employee</title>
 
 
     <style type="text/css">
@@ -51,7 +51,7 @@ body{
                 department1 = $("#department_id_input").val();
 
                 $.ajax({
-                    type: 'POST',
+                    type: 'GET',
                     dataType: 'JSON',
                     url: 'https://morganoffice.herokuapp.com/api/employees/',
                     data: {
@@ -106,7 +106,7 @@ body{
     <p id = "department_id_input_err"></p>
     <button type="button" id="add_employee_but">Add Employee</button>
     <p></p>
-    <a href="MainMenu.html">Main Menu</a>
+    <a href="mainmenu.html">Main Menu</a>
 </form>
 </body>
 </html>
