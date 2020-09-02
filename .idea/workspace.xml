@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="16e9340d-2557-4e2b-8993-20b34109dd6a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/updatededepartment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producedepartments&amp;employeesreport.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producedepartmentsreport.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/produceemployeesreport.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/produceprojectsandassignmentsreport.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/produceprojectsreport.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adddepartment.html" beforeDir="false" afterPath="$PROJECT_DIR$/adddepartment.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deletedepartment1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/addemployee.html" beforeDir="false" afterPath="$PROJECT_DIR$/addemployee.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/updatededepartment.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,8 +38,10 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -44,6 +51,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.notifications" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -64,7 +72,15 @@
       <workItem from="1597886098980" duration="12562000" />
       <workItem from="1598141853996" duration="3129000" />
       <workItem from="1598145309040" duration="120000" />
-      <workItem from="1598150013928" duration="14221000" />
+      <workItem from="1598150013928" duration="17065000" />
+      <workItem from="1598249228149" duration="824000" />
+      <workItem from="1598419345582" duration="799000" />
+      <workItem from="1598438414201" duration="661000" />
+      <workItem from="1598440612939" duration="1520000" />
+      <workItem from="1598443069237" duration="447000" />
+      <workItem from="1598527352075" duration="731000" />
+      <workItem from="1598786853683" duration="153000" />
+      <workItem from="1598859548657" duration="21952000" />
     </task>
     <servers />
   </component>
